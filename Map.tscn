@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 5, 2.5, 5 )
+
+[node name="Map" type="Spatial"]
+
+[node name="Ground" type="Spatial" parent="."]
+
+[node name="Mesh" type="CSGBox" parent="Ground"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.5, 0 )
+width = 10.0
+height = 5.0
+depth = 10.0
+
+[node name="StaticBody" type="StaticBody" parent="Ground"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.5, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Ground/StaticBody"]
+shape = SubResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.970485, 0.24116, 0, -0.24116, 0.970485, 0, 1.86409, 6.5689 )

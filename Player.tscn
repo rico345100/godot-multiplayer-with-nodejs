@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="CylinderShape" id=2]
+radius = 0.4
+height = 1.6
+
+[node name="Player" type="KinematicBody"]
+
+[node name="CSGCylinder" type="CSGCylinder" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0 )
+radius = 0.4
+height = 1.6
+sides = 16
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0 )
+shape = SubResource( 2 )
