@@ -52,7 +52,6 @@ func _ready():
 func _process(delta):
 	if client.is_connected_to_host() && client.get_available_bytes()  > 0:
 		var message_type = client.get_8()
-		print("message type: " + str(message_type))
 		
 		match message_type:
 			MessageType.AssignID:
@@ -105,11 +104,11 @@ func create_network_object():
 	
 	print("Instantiate Object: {instance_type} {client_id} {local_id}".format({
 		"instance_type": str(instance_type),
-		"client_id": str(client_id),
+		"client_id": str(cid),
 		"local_id": str(local_id)
 	}))
-	
-	instantiate_from_network(instance_type, client_id, local_id, position)	
+
+	instantiate_from_network(instance_type, cid, local_id, position)	
 
 func network_object_sync_complete():
 	print("All Network Objects synchronized.")
@@ -186,6 +185,8 @@ func instantiate(instance_type: int, position: Vector3) -> Spatial:
 	instance.initialize()
 	
 	local_id_counter += 1
+	
+	network_objects.append(instance)
 	
 	return instance
 

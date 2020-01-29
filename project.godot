@@ -27,9 +27,9 @@ _global_script_class_icons={
 [application]
 
 config/name="Godot and Node.js TCP Connection Example"
-config/description="Simple Game that demonstrates communicate with Node.js Game Server with TCP Sockets."
 run/main_scene="res://Map.tscn"
 config/icon="res://icon.png"
+config/description="Simple Game that demonstrates communicate with Node.js Game Server with TCP Sockets."
 
 [display]
 
