@@ -1,9 +1,18 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://NetworkManager.gd" type="Script" id=1]
+[ext_resource path="res://GameManager.gd" type="Script" id=2]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 5, 2.5, 5 )
 
 [node name="Map" type="Spatial"]
+
+[node name="NetworkManager" type="Spatial" parent="."]
+script = ExtResource( 1 )
+
+[node name="GameManager" type="Spatial" parent="."]
+script = ExtResource( 2 )
 
 [node name="Ground" type="Spatial" parent="."]
 

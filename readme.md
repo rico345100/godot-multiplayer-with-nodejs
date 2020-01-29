@@ -2,7 +2,7 @@
 Simple Multiplayer implemenation with Node.js TCP Server. See also [https://github.com/rico345100/nodejs-tcp-server-for-godot](https://github.com/rico345100/nodejs-tcp-server-for-godot).
 
 ## Requirements
-- Godot 3.2x
+- Developed with Godot 3.2.rc3.official
 
 ## Getting Started
 You have to run the Node.js Server before game starts.

@@ -8,9 +8,20 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Spatial",
+"class": "GameManager",
+"language": "GDScript",
+"path": "res://GameManager.gd"
+}, {
+"base": "Spatial",
+"class": "NetworkManager",
+"language": "GDScript",
+"path": "res://NetworkManager.gd"
+} ]
 _global_script_class_icons={
-
+"GameManager": "",
+"NetworkManager": ""
 }
 
 [application]
